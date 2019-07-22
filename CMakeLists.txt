@@ -14,6 +14,7 @@ catkin_package(
 install(DIRECTORY include/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "signal.hpp"
+  PATTERN "adapter" EXCLUDE
 )
 
 
