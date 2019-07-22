@@ -11,9 +11,9 @@ catkin_package(
 )
 
 
-install(DIRECTORY include/${PROJECT_NAME}/
+install(DIRECTORY include/sigslot/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp"
+  FILES_MATCHING PATTERN "signal.hpp"
 )
 
 
