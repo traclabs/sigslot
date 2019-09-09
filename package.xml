@@ -1,13 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-
   <name>pal_sigslot</name>
   <version>1.1.0</version>
   <description>A simple C++14 signal-slots implementation</description>
   <maintainer email="palacaze@github.com">Pierre-Antoine Lacaze</maintainer>
   <license>MIT</license>
-
   <buildtool_depend>catkin</buildtool_depend>
-
-
 </package>
