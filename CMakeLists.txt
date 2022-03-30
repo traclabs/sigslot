@@ -48,16 +48,24 @@ set(COMMON_H_FILES
 # target_link_libraries(pal_sigslot ${dependencies})
 # ament_target_dependencies(pal_sigslot ${dependencies})
 
+
+# install(TARGETS pal_sigslot
+  # ARCHIVE DESTINATION lib
+  # LIBRARY DESTINATION lib
+  # RUNTIME DESTINATION bin
+# )
+
+# install(TARGETS pal_sigslot
+  # RUNTIME DESTINATION lib/${PROJECT_NAME}
+# )
+
 install(DIRECTORY include/
   DESTINATION include/
 )
 
 ament_export_include_directories(include)
-ament_export_libraries(pal_sigslot)
+# ament_export_libraries(pal_sigslot)
 ament_package()
-
-
-
 
 
 
