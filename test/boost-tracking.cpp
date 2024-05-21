@@ -27,7 +27,7 @@ void test_track_shared() {
     sig.connect(&s::f1, s1);
 
     auto s2 = boost::make_shared<s>();
-    boost::weak_ptr<s> w2 = s2;
+    std::weak_ptr<s> w2 = s2;
     sig.connect(&s::f2, w2);
 
     sig(1);
@@ -50,7 +50,7 @@ void test_track_other() {
     sig.connect(f1, d1);
 
     auto d2 = boost::make_shared<dummy>();
-    boost::weak_ptr<dummy> w2 = d2;
+    std::weak_ptr<dummy> w2 = d2;
     sig.connect(o1(), w2);
 
     sig(1);

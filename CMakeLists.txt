@@ -1,20 +1,17 @@
-cmake_minimum_required(VERSION 2.7)
+cmake_minimum_required(VERSION 3.5)
 project(pal_sigslot)
+find_package(ament_cmake REQUIRED)
 
-find_package(catkin)  
+  
 
-catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES 
-  CATKIN_DEPENDS
-  DEPENDS 
-)
-
+ament_export_include_directories(include)
+ament_export_libraries()
+ament_export_dependencies()
+ament_package()
 
 install(DIRECTORY include/
-  DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
+  DESTINATION include
   FILES_MATCHING PATTERN "signal.hpp"
   PATTERN "adapter" EXCLUDE
 )
-
 
